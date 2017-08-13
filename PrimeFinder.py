@@ -30,6 +30,12 @@ class PrimeFinder:
     """ Define a generic function for calculation """
     @staticmethod
     def isPrime(num):
+        ''' check if number is 1 or 2''' 
+        if num <= 2:
+            return  True;
+        ''' if not two then check if it's divisible by 2 to avoid lot's of operations''' 
+        if num > 2 & num % 2 == 0:
+            return False
         if num < 10000:
             return  PrimeFinder.smallPrime(num)
         else:
